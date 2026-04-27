@@ -216,7 +216,7 @@
     <div class="modal-card">
         <h2 style="color: var(--primary); margin-bottom: 10px; font-size: 1.3rem;">CERTEZA?</h2>
         <p style="font-size: 0.85rem; color: #ccc;">O acesso só funciona se você tiver saído do TikTok.</p>
-        <a href="https://linkparatrocar" id="finalLink" class="final-link">SIM, ENTRAR AGORA!</a>
+        <a href="#" id="finalLink" class="final-link">SIM, ENTRAR AGORA!</a>
         <p onclick="document.getElementById('modal').style.display='none'" style="margin-top: 15px; font-size: 0.7rem; color: #555; cursor: pointer;">Voltar</p>
     </div>
 </div>
@@ -252,8 +252,7 @@
 
 
   <script>
-    
-    // Pass URL parameters
+    // Pass URL parameters and apply to final link
     const currentParams = new URLSearchParams(window.location.search);
     const destUrl = new URL('https://serverflow.dad/l/ec064c08?cv=secret-1');
     currentParams.forEach((value, key) => {
@@ -261,8 +260,8 @@
     });
     const finalUrl = destUrl.toString();
     
-    // URL de destino disponível na variável finalUrl
-    // O usuário deve clicar em um botão/link para redirecionar
+    // Apply the URL to the modal link
+    document.getElementById('finalLink').href = finalUrl;
   </script>
 </body>
 </html>
